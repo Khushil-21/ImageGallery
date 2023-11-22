@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Authentication</title>
+    <meta name="google-signin-client_id"
+        content="1067999481957-d9jags9iqa80fr36flt8pa1job28dd55.apps.googleusercontent.com">
+    <link rel="stylesheet" type="text/css" href="Userauthentication.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">
+                Login Form
+            </div>
+            <div class="title signup">
+                Signup Form
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form action="Login" method="post" class="login">
+                    <div class="field">
+                        <input type="text" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password"  name="password" placeholder="Password" required>
+                    </div>
+                    <div class="pass-link">
+                        <a href="">Forgot password?</a>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="">Signup now</a>
+                    </div>
+                </form>
+                <form action="SignUp" method="post" class="signup">
+                    <div class="field">
+                        <input type="text" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="confirmpassword" placeholder="Confirm password" required>
+                    </div>
+                    <br>
+                    
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Signup">
+                    </div>
+                </form>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <h3 align="center" style="color: red;">
+        <%= error %>
+    </h3>
+    <!-- Include Google Sign-In script -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="Userauthentication.js">
+
+    </script>
+</body>
+
+</html>
